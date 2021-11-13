@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ListView Concepts</string>
+    <string name="listview_image">ListView Image</string>
+
+    <string-array name="countries_list">
+        <item>Afghanistan</item>
+        <item>Bahamas</item>
+        <item>Chile</item>
+        <item>Canada</item>
+        <item>Estonia</item>
+        <item>Havana</item>
+        <item>London</item>
+        <item>Turkey</item>
+        <item>Iran</item>
+        <item>Iraq</item>
+        <item>Saudi Arabia</item>
+        <item>Australia</item>
+        <item>South Africa</item>
+        <item>Pakistan</item>
+    </string-array>
+</resources>

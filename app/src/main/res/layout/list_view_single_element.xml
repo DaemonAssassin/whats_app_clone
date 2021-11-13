@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_ViewGroup"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/light_black_bg"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <ImageView
+        android:id="@+id/lv_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/listview_image"
+        app:layout_constraintStart_toEndOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/mateen" />
+
+    <TextView
+        android:id="@+id/lv_titleTV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center_vertical"
+        android:letterSpacing="0.05"
+        android:maxLength="18"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/lv_messageTV"
+        app:layout_constraintEnd_toStartOf="@id/lv_timeTV"
+        app:layout_constraintStart_toEndOf="@id/lv_image"
+        app:layout_constraintTop_toTopOf="@id/lv_image"
+        tools:text="Mateen Mehmood" />
+
+    <TextView
+        android:id="@+id/lv_messageTV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="top"
+        android:letterSpacing="0.05"
+        android:maxLength="25"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/lv_image"
+        app:layout_constraintEnd_toStartOf="@id/iv_muted_pin_action"
+        app:layout_constraintStart_toStartOf="@id/lv_titleTV"
+        app:layout_constraintTop_toBottomOf="@id/lv_titleTV"
+        tools:text="Mateen Mehmood" />
+
+    <TextView
+        android:id="@+id/lv_timeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="center_vertical"
+        android:letterSpacing="0.05"
+        android:maxLength="30"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/lv_messageTV"
+        app:layout_constraintEnd_toStartOf="@id/end_guideline"
+        app:layout_constraintTop_toTopOf="@id/lv_titleTV"
+        tools:text="11:00 AM" />
+
+    <ImageView
+        android:id="@+id/iv_muted_pin_action"
+        android:layout_width="18dp"
+        android:layout_height="0dp"
+        android:gravity="top"
+        app:layout_constraintBottom_toBottomOf="@id/lv_messageTV"
+        app:layout_constraintEnd_toStartOf="@id/end_guideline"
+        app:layout_constraintTop_toBottomOf="@id/lv_timeTV"
+        tools:src="@drawable/ic_pin" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
